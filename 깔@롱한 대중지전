@@ -1,0 +1,1035 @@
+굉장히 안타깝게도 한국어들이 전부 아스키처리되서 알아보기 힘들지만 코드 자체는 유실된게 없음ㅇㅇ
+#include<stdio.h>
+#include <windows.h> 
+#include <stdlib.h>
+#include <time.h>
+#define CRI 2
+
+	
+
+int main()
+{
+
+int CR=10;
+double levhp=100;
+double nohp=100;
+double HP;
+HP= levhp+nohp;
+double lev_HP = HP;
+double UP_HP =HP;
+
+double DF=50;
+double lev_DF = DF;
+double UP_DF =DF;
+int mf=0;
+int tf=0;
+int of=0;
+int ff=1;
+int EXPMAX=20;
+int coin=100;
+
+
+
+double levAt=10;
+double noAt=10;
+
+double At;
+At= levAt+noAt;
+
+double EXP =0; 
+int level =1; 
+
+START:
+system("cls"); 
+printf("				  			    		 	########  ##  ##      ############     ##############  ###    #################  ###                                                    \n");
+printf("							     			########  ##  ##           ##          ##############  ###    #################  ###                                                    \n");
+printf("							    	 		###       ##  ##       ####  ####           ###        ###           ###         ###                                                    \n");
+printf("							    		 	###       ######      ############          ###        ###          ## ##     ######                                                    \n");
+printf("							     			###       ##  ##           ##             ##   ##      ###         ##   ##    ######                                                    \n");
+printf("							     			###       ##  ##       ##########        ##     ##     ###                       ###                                                    \n");
+printf("							     			###       ##  ##      #          #      ##       ##    ###        ##                                                                    \n");
+printf("							     			########  ##  ##      #          #     ##         ##   ###        ##        	                                                   		\n");
+printf("							     			########  ##  ##       ##########     ##           ##  ###        ###################                                             		\n");
+printf("												 START�� ���ҽ� 1�� �Է����ּ���(2�Է½� ���� ����) \n");
+printf("=============================================================================================================================================================================================================================================\n");
+int sta;
+scanf("%d",&sta);
+
+if (sta==1){
+	main : 
+	
+	system("cls");
+	printf("1.���尣\n");
+	printf("2.����\n");
+	printf("3.���� ����\n");
+	printf("============================================\n");
+	printf("�̵��� ���� ���ڸ� �Է��� �ּ���.\n"); 
+	int mov;
+	scanf(" %d",&mov);
+		if(mov==1)
+		{
+		
+			UPG:
+			system("cls");
+			printf("\"������ ���尣�� �°� ȯ���ϳ�!\"\n");
+			printf("�������� �������� ����� �հ������� �ðܺ�����!\n");
+			printf("============================================\n");
+			printf("���� ��ȭ�� ���ҽ� 1�� �Է�\n���� ��ȭ�� ���ҽ� 2�� �Է�\n���� ��ȭ�� ���ҽ� 3�� �Է�\n�������� ������ ��ȭ�Ϸ��� 4�� �Է� \n���ư��⸦ ���Ѵٸ� 5�� �Է� \n(��ȭ����� ���� 10����Դϴ�) \n");
+			printf("============================================\n");
+			int up;
+			scanf(" %d",&up);
+			if (coin>=10)
+			{
+			
+				if (up==1){
+					int random = 0;
+					srand(time(NULL));
+					random = rand()%9+1;
+					
+					if (random<7){
+						int Ounm=0;
+						system("cls");
+						printf(" ���� ��ȭ����!\n");
+						mf+=1;
+						printf("%d ��\n",mf); 	
+						coin-=10;
+						noAt=noAt+10;
+						At+=10;
+						BACK:
+						printf("===================================\n");
+						printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+						int Onum;
+						scanf("%d",&Onum);
+						
+						if  (Onum==1){
+							goto main;	
+						}
+						else if (Onum !=1){
+							goto BACK;
+						}
+				
+					}
+					else if (random>=7){
+						system("cls");
+						printf("��ȭ����!\n");
+						if  (mf>0){
+							printf("��ȭ�� �Ѵܰ� �������ϴ�!\n");
+							printf("\n");
+							mf-=1;
+							noAt=noAt-10;
+							At-=10;
+							coin-=10;
+							back0:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+				
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back0;
+							}	
+						}
+						else if (mf==0){
+							printf("�� �̻� ������ ��ġ�� ���׿䤻\n");
+							printf("\n");
+
+							coin-=10;
+							back:
+						
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+					
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back;
+							}
+						}
+					}
+				}
+				else if (up==2){
+					int random = 0;
+					srand(time(NULL));
+					random = rand()%9;
+					
+					if (random>4){
+						int Ounm=0;
+						system("cls");
+						printf("���� ��ȭ����!\n");
+						tf+=1;
+						printf("%d ��\n",tf);
+						UP_DF+=10;
+						DF = UP_DF;
+						lev_DF=DF;
+						coin-=10;
+						BACKt:
+						printf("===================================\n");
+						printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+						int Onum;
+						scanf("%d",&Onum);
+						
+						if  (Onum==1){
+							goto main;	
+						}
+						else if (Onum !=1){
+							goto BACKt;
+						}
+						}
+					else if (random<=4){
+						system("cls");
+						printf("��ȭ����!\n");
+						if  (tf>0){
+							printf("��ȭ�� �Ѵܰ� �������ϴ�!\n");
+							printf("\n");
+							coin-=10;
+							tf-=1;
+							UP_DF+=30;
+							DF = UP_DF;
+							lev_DF=DF;
+							back12:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+							
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back12;
+							}	
+						}
+						else if (tf==0){
+							printf("�� �̻� ������ ��ġ�� ���׿䤻\n");
+							printf("\n");
+							coin-=10;
+	
+							back13:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back13;
+							}
+						}
+					}
+				}
+				else if (up==3){
+					int random = 0;
+					srand(time(NULL));
+					random = rand()%9;
+					
+					if (random>4){
+						int Ounm=0;
+						system("cls");
+						printf("���� ��ȭ����!\n");
+						of+=1;
+						printf("%d ��\n",of);
+						nohp+=30;
+						UP_HP=levhp+nohp;
+						HP= UP_HP;
+						coin-=10;
+						BACK14:
+						printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+						printf("===================================\n");
+				
+						int Onum;
+						scanf("%d",&Onum);
+						
+						if  (Onum==1){
+							goto main;	
+						}
+						else if (Onum !=1){
+							goto BACK14;
+						}
+					}
+					else if (random<=4){
+						system("cls");
+						printf("��ȭ����!\n");
+						if  (of>0){
+							printf("��ȭ�� �Ѵܰ� �������ϴ�!\n");
+							printf("\n");
+
+							coin-=10;
+							of-=1;
+							nohp-=30;
+							UP_HP=levhp+nohp;
+							HP = UP_HP;
+							back15:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+							
+						
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back15;
+							}	
+						}
+						else if (of==0){
+							printf("�� �̻� ������ ��ġ�� ���׿䤻\n");
+							printf("\n");
+							
+							UP_HP=levhp+nohp;
+							HP = UP_HP;
+							coin-=10;
+							back16:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+						
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back16;
+							}
+						}
+					}
+				}
+				else if (up==4){
+					int random = 0;
+					srand(time(NULL));
+					random = rand()%9;
+					
+					if (random>4){
+						int Ounm=0;
+						system("cls");
+						printf("���� ��ȭ����!\n");
+						ff+=1;
+						printf("%d ��\n",ff);
+						CR+=10;
+						coin-=10;
+						BACK15:
+						printf("===================================\n");
+						printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+						int Onum;
+						scanf("%d",&Onum);
+						
+						if  (Onum==1){
+							goto main;	
+						}
+						else if (Onum !=1){
+							goto BACK15;
+						}
+					}
+					else if (random<=4){
+						system("cls");
+						printf("��ȭ����!\n");
+						if  (ff>1){
+							printf("��ȭ�� �Ѵܰ� �������ϴ�!\n");
+							printf("\n");
+							coin-=10;
+							ff-=1;
+							CR-=10;
+							back18:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+							
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back18;
+							}	
+						}
+						else if (ff==1){
+							printf("�� �̻� ������ ��ġ�� ���׿䤻\n");
+							printf("\n");
+
+							coin-=10;
+							back17:
+							printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+							printf("===================================\n");
+							
+							int Onum;
+							scanf("%d",&Onum);
+							if  (Onum==1){
+							goto main;	
+							}
+							else if (Onum != 1){
+								goto back17;
+							}
+						}
+					}
+				}
+				else if(up==5){
+					goto main;
+				}
+				else{
+					goto UPG;
+				} 
+			}
+			else if(coin<10){
+				bago:
+				system("cls");
+				printf("\"������~ �츰 ������ �� �ȹ޾�!\"\n");
+				printf("===================================\n");
+				printf("���ư���� 1���� �Է��ϼ���.\n");
+				int poor;
+				scanf(" %d",&poor);
+				if (poor ==1){
+					goto main;
+				} 
+				else {
+					goto bago;
+				}
+			}
+
+		}
+		else if (mov ==2)
+		{
+				
+			system("cls");
+			int tip;
+			srand(time(NULL));
+			tip = rand()%9+1;
+			if(tip>=5){
+				printf("TIP.�������� ������ ġ��Ÿ�Դϴ�!\n");
+			}
+			else {
+				printf("TIP.ü���� �ø��°� ��õ�մϴ�!\n");
+			}
+			
+			printf("--------------�ε���-------------\n");
+			Sleep(2000);
+			system("cls");
+			lev_HP = HP;
+			int MLEV;
+			double mhp;
+			double mhp1;
+			double mak;
+			double mdf;
+			double mdf1;
+			double  i;
+			int Mc;
+			int hi;
+			int mn;
+
+			srand(time(NULL));
+			Mc = rand()%9+2;
+			hi = rand()%9+2;
+			if (Mc<=2){
+				printf("�߻��� �����غ��̴� ���� ������ ��(��)��Ÿ����!\n");
+				printf("===================================\n");
+				mhp=50;
+				mhp1=mhp;
+				mak=10;
+				mdf=10;
+				mdf1=mdf;
+				mn=1;
+				printf("������ �غ��϶�!\n");
+				Sleep(2000);
+
+			}
+			else if (Mc>=3 && Mc<=4){
+				printf("�߻��� �쿩�����Ͱ��� ��ü ������ ��(��)��Ÿ����!\n");
+				printf("===================================\n");
+				mhp=60;
+				mhp1=mhp;
+				mak=20;
+				mdf=50;
+				mdf1=mdf;
+				mn=2;
+				printf("������ �غ��϶�!\n");
+				Sleep(2000);
+
+
+			} 
+			else if (Mc>=5 && Mc<=6){
+				printf("�߻��� �ͺ� ���� ���� ��(��)��Ÿ����!\n");
+				printf("===================================\n");
+				mhp=70;
+				mhp1=mhp;
+				mak=80;
+				mdf=10;
+				mdf1=mdf;
+				mn=3; 
+				printf("������ �غ��϶�!\n");
+				Sleep(2000);
+				
+			}
+			else if (Mc>=7 && Mc<=8){
+				printf("�߻��� ����� Ǫ������ ���� ���� ��(��)��Ÿ����!\n");
+				printf("===================================\n");
+				mhp=90;
+				mhp1=mhp;
+				mak=80;
+				mdf=10;
+				mdf1=mdf;
+				mn=4;
+				printf("������ �غ��϶�!\n");
+				Sleep(2000);
+				
+			}
+			else if (Mc>=9 && Mc<=10){
+				printf("�߻��� �巡�� ��(��)��Ÿ����!\n");
+				printf("===================================\n");
+				mhp=100;
+				mhp1=mhp;
+				mak=50;
+				mdf=100;
+				mdf1=mdf;
+				mn=5;
+				printf("������ �غ��϶�!\n");
+				Sleep(2000);
+				
+			}
+		
+			srand(time(NULL));
+			if (level==1){
+				MLEV = 1;
+			}
+			
+			else if (level >1 && level <6){
+				MLEV = rand ()%9+4;
+				i=0.8;
+				mak=mak + (mak*i);
+			}
+			
+			else if (level>=6 && level <10){
+				MLEV = rand ()%9+9;
+				i=1.5;
+				mak=mak + (mak*i);
+			}
+			
+			BATTLE :
+			int doble;
+			srand(time(NULL));
+			int MDF;
+			MDF= rand()%9+1;
+			system("cls");
+			printf("===================================\n");
+			printf("|          PLAYER STATUS          |\n");
+			printf("===================================\n");
+			printf("��  ��  : %d \n",level);
+			printf("ü  ��  : %.2lf / %.2lf \n",lev_HP,HP);
+			printf("��ť��  : %.2lf \n",At);
+			printf("����  : %.2lf / %.2lf \n",lev_DF,DF);
+			printf("===================================\n");
+			if (MLEV>= level*2){
+				printf("************!���� ����!************\n");
+				doble=2;
+			}
+			printf("===================================\n");
+			printf("|          MONSTER STATUS         |\n");
+			printf("===================================\n");
+			printf("���� �� : "); 
+			switch (mn){
+				case 1:
+					printf("�����غ��̴� ���� ������\n");
+					break; 
+				case 2:
+					printf("�쿩�����Ͱ��� ��ü ������\n");
+					break;
+				case 3:
+					printf("�ͺ� ���� ����\n");
+					break;
+				case 4:
+					printf("����� Ǫ������ ���� ����\n");
+					break;
+				case 5:
+					printf("�巡��\n");
+					break;
+			}
+			printf("��  ��  : %d \n",MLEV);
+			printf("ü  ��  : %.2lf / %.2lf \n",mhp,mhp1);
+			printf("���ݷ�  : %.2lf \n",mak);
+			printf("����  : %.2lf / %.2lf\n",mdf,mdf1);
+			printf("===================================\n");
+			printf("         ��� �ൿ�ұ�?          \n");
+			printf("===================================\n");
+			printf("1.�ο��.\n2.����ģ��.\n3.���´�\n");
+			printf("===================================\n");
+			if (mhp<=0){
+				int b=5;
+				int i=1;
+				printf("===================================\n");
+				printf("����� �¸��ߴ�!\n");
+				srand(time(NULL));
+				int coin1;
+				coin1= rand()%10+b;
+				int EXPP;
+				EXPP= rand()%10+b;
+				lev_DF=DF;
+				
+				
+				if (doble==2){
+					printf("%d ��带 ȹ���ߴ�(������� 2��)!\n",2*coin1);
+					coin= coin +2*coin1;
+				}
+				else {
+					coin= coin +coin1;
+					printf("%d ��带 ȹ���ߴ�!\n",coin1);
+				} 
+				
+				printf("%d ����ġ�� ȹ���ߴ�!\n",EXPP); 
+				EXP+=EXPP;
+				while (1){
+					if (EXP>=EXPMAX){
+					
+						printf("!LEVEL UP!\n");
+						level+=1;
+						levAt+=5;
+						At= levAt+noAt;
+						levhp+=10;
+						HP= levhp+nohp;
+						
+						i+=1;
+						b=b+i;
+						coin+=30;
+						EXP=EXP-EXPMAX;
+						EXPMAX+=10;
+				}
+					else if (EXP<EXPMAX){
+						break;
+					}
+				}
+				HOME:
+				printf("===================================\n");
+				printf("���ư����� 2�� �Է�\n");
+				int a;
+				scanf("%d",&a);
+				if (a==2){
+					goto main;
+				} 
+				else {
+					goto HOME;
+				}
+			}
+			else if (lev_HP<=0){
+				printf("===================================\n");
+				printf("����� �й��ߴ�...\n");
+				lev_DF=DF;
+				srand(time(NULL));
+				int coin1;
+				coin1= rand()%10+1;
+				
+				printf("%d ��带 �Ҿ���ȴ�..\n",coin1);
+				coin= coin -coin1;
+				
+				HOME1:
+				printf("===================================\n");
+				printf("���ư����� 2�� �Է�\n");
+				int a;
+				scanf("%d",&a);
+				if (a==2){
+					goto main;
+				} 
+				else {
+					goto HOME1;
+				}
+			}
+			int act;
+			ACT:
+			scanf("%d",&act);
+			if (act==2){
+				lev_DF=DF;
+				srand(time(NULL));
+				int coin1;
+				coin1= rand()%10+1;
+				printf("===================================\n");
+				if (coin>coin1){
+				
+					printf("���������� ���߿� %d ��带 �기�Ű���..\n",coin1);
+					coin= coin-coin1;
+				}
+				else{
+					printf("��ó�� �԰� ���ư���..\n");	
+				}
+				Sleep(2000);
+				goto main;
+			}
+			else if (act==1){
+			printf("===================================\n");
+			int cr;
+			double  sumC=At+(At*(CR/10));
+
+			srand(time(NULL));
+			cr= rand()%10+1;
+			if (CR/10>=cr)
+			{
+
+				printf("����� �ͷ��� ������ ��������!\n");
+				printf("����� ������ �̾� ������ ��������!\n");
+				printf("ġ���� �ϰ�!\n");
+				printf("������ : %.3lf\n",sumC);
+				printf("===================================\n");
+				if (mn==1){
+					if (MDF<=5){
+						printf("�������� ����� �˼��� �ֵѷ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+					}
+					else if (MDF>=6){
+						if ((sumC/2)<=mdf){
+							printf("�������� �˼��� ���ظ� ���Ƴ����ϴ�..\n");
+							mhp= mhp -(sumC/2);
+							mdf = mdf -(sumC/2);
+						}
+						else if ((sumC/2)>mdf){
+						
+							printf("�������� �˼��� ���¸� �������� ���ߴ�!\n");
+							mhp= mhp -(sumC/2);
+						}
+					}
+				}
+				if (mn==2){
+					if (MDF<=5){
+						
+						printf("�������� ��Ȯ�ϰ� �˼��� �ֵѷ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+					}
+					else if (MDF>=6){
+						if ((sumC/2)<=mdf){
+							printf("�������� �˼��� ���ظ� ���Ƴ��Ű���..\n");
+							mhp= mhp -(sumC/2);
+							mdf = mdf -(sumC/2);
+						}
+						else if ((sumC/2)>mdf){
+						
+							printf("�������� �˼��� ����ġ ���ߴ�!\n");
+							mhp= mhp -(sumC/2);
+						}
+					}
+				} 
+				if (mn==3){
+					if (MDF<=5){
+						printf("������ ������  ���� ���ѿԴ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+					}
+					else if (MDF>=6){
+						if ((sumC/2)<=mdf){
+							printf("������ ������ ���ظ� ���Ƴ����ϴ�..\n");
+							mhp= mhp -(sumC/2);
+							mdf = mdf -(sumC/2);
+						}
+						else if ((sumC/2)>mdf){
+						
+							printf("������ ���׿� ��ó�� ��������!\n");
+							mhp= mhp -(sumC/2);
+						}
+					}
+				}  
+				if (mn==4){
+					if (MDF<=5){
+						printf("������ �̻��� ����Դ� !\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+					}	
+					else if (MDF>=6){
+						if ((sumC/2)<=mdf){
+							printf("������ ������ ���ظ�  ���Ƴ´�..\n");
+							mhp= mhp -(sumC/2);
+							mdf = mdf -(sumC/2);
+						}
+						else if ((sumC/2)>mdf){
+						
+							printf("������ ������ ���� ��������!\n");
+							mhp= mhp -(sumC/2);
+						}
+					}
+				}
+				if (mn==5){
+					if (MDF<=5){
+						printf("�巡���� ����ϰ� �귡���� �վ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+					}
+					else if (MDF>=6){
+						if ((sumC/2)<=mdf){
+							printf("�巡���� ���ǰ� ���ظ� ���� ���Ƴ´�..\n");
+							mhp= mhp -(sumC/2);
+							mdf = mdf -(sumC/2);
+						}
+						else if ((sumC/2)>mdf){
+						
+							printf("�巡���� ���ǰ� ���ظ� �������� ���ߴ�!\n");
+							mhp= mhp -(sumC/2);
+						}
+					}
+				}
+				Sleep(2500);
+				mhp= mhp- sumC;
+				goto BATTLE;
+			}
+			else {
+				printf("����� �ͷ��� ������ ��������!\n");
+				printf("������  : %.2lf\n",At);
+				printf("===================================\n"); 
+				if (mn==1){
+						if (MDF<=5){
+						printf("�������� ����� �˼��� �ֵѷ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+						mhp= mhp -At;
+					}
+					else if (MDF>=6){
+						if ((At/2)<=mdf){
+							printf("�������� �˼��� ���ظ� ���Ƴ����ϴ�..\n");
+							mhp= mhp -(At/2);
+							mdf = mdf -(At/2);
+						}
+						else if ((At/2)>mdf){
+						
+							printf("�������� �˼��� ���¸� �������� ���ߴ�!\n");
+							mhp= mhp -At;
+						}
+					}
+				}
+				if (mn==2){
+					if (MDF<=5){
+						
+						printf("�������� ��Ȯ�ϰ� �˼��� �ֵѷ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+						mhp= mhp -At;
+					}
+					else if (MDF>=6){
+						if ((At/2)<=mdf){
+							printf("�������� �˼��� ���ظ� ���Ƴ��Ű���..\n");
+							mhp= mhp -(At/2);
+							mdf = mdf -(At/2);
+						}
+						else if ((At/2)>mdf){
+						
+							printf("�������� �˼��� ����ġ ���ߴ�!\n");
+							mhp= mhp -At;
+						}
+					}
+				} 
+				if (mn==3){
+						if (MDF<=5){
+						printf("������ ������  ���� ���ѿԴ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+						mhp= mhp -At;
+					}
+					else if (MDF>=6){
+						if ((At/2)<=mdf){
+							printf("������ ������ ���ظ� ���Ƴ����ϴ�..\n");
+							mhp= mhp -(At/2);
+							mdf = mdf -(At/2);
+						}
+						else if ((At/2)>mdf){
+						
+							printf("������ ���׿� ��ó�� ��������!\n");
+							mhp= mhp -At;
+						}
+					}
+				}  
+				if (mn==4){
+					if (MDF<=5){
+						printf("������ �̻��� ����Դ� !\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+						mhp= mhp -At;
+					}	
+					else if (MDF>=6){
+						if ((At/2)<=mdf){
+							printf("������ ������ ���ظ�  ���Ƴ´�..\n");
+							mhp= mhp -(At/2);
+							mdf = mdf -(At/2);
+						}
+						else if ((At/2)>mdf){
+						
+							printf("������ ������ ���� ��������!\n");
+							mhp= mhp -At;
+						}
+					}
+				}
+				if (mn==5){
+					if (MDF<=5){
+						printf("�巡���� ����ϰ� �귡���� �վ� �Դ�!\n");
+						printf("������ : %.2lf\n",mak);
+						lev_HP= lev_HP- mak;
+						mhp= mhp -At;
+					}
+					else if (MDF>=6){
+						if ((At/2)<=mdf){
+							printf("�巡���� ���ǰ� ���ظ� ���� ���Ƴ´�..\n");
+							mhp= mhp -(At/2);
+							mdf = mdf -(At/2);
+						}
+						else if ((At/2)>mdf){
+						
+							printf("�巡���� ���ǰ� ���ظ� �������� ���ߴ�!\n");
+							mhp= mhp -At;
+						}
+					}
+				}
+				Sleep(2500);
+				goto BATTLE;
+
+				}
+		
+			}
+			else if (act=3){
+				if (lev_DF>=(mak*3)/4){
+				
+					int md;
+					srand(time(NULL));
+					md =rand()%9+1;
+					printf("����� �ܴ��� ������ ���о���!\n");
+					printf("===================================\n"); 
+					if (mn==1){
+						if (md>=6){
+							printf("�������� ����� �˼��� �ֵѷ� �Դ�!\n");
+							printf("===================================\n");
+							printf("����� �ܴ��� ������ ���ظ� �پ�´�!\n");
+							printf("������ : %.2lf\n",mak);
+							lev_HP= lev_HP- (mak/4);
+							lev_DF= lev_DF-(mak*3)/4;
+						}
+						else{
+							printf("�������� ����� �� �õ��ߴ�!\n");
+							printf("===================================\n");
+							printf("����� �����ӻ��̿� ���� ����� �帥��..\n");
+						}
+						
+					}
+					if (mn==2){
+						if (md>=6){
+							printf("�������� ��Ȯ�ϰ� ���� �ֵѷ� �Դ�!\n");
+							printf("===================================\n");
+							printf("����� �ܴ��� ������ ���ظ� �پ�´�!\n");
+							printf("������ : %.2lf\n",mak);
+							lev_HP= lev_HP- (mak/4);
+							lev_DF= lev_DF-(mak*3)/4;
+						} 
+						else{
+							printf("�������� ħ���ϰ� �� �õ��ߴ�!\n");
+							printf("===================================\n");
+							printf("����� �����ӻ��̿� ���� ����� �帥��..\n");
+						}
+						
+	
+					} 
+					if (mn==3){
+						if (md>=7){
+							printf("������ ������  ���� ���ѿԴ�!\n");
+							printf("===================================\n");
+							printf("����� �ܴ��� ������ ���ظ� �پ�´�!\n");
+							printf("������ : %.2lf\n",mak);
+							lev_HP= lev_HP- (mak/4);
+							lev_DF= lev_DF-(mak*3)/4;
+						} 
+						else{
+							printf("������ ������ �ܴ������־���!\n");
+							printf("===================================\n");
+							printf("��Ű� ���� ���̿� ���� ����� �帥��...\n");
+						}
+						
+					}  
+					if (mn==4){
+						if (md>=7){
+							printf("������ �̻��� �� ���� ����Դ�!\n");
+							printf("===================================\n");
+							printf("����� �ܴ��� ������ ���ظ� �پ�´�!\n");
+							printf("������ : %.2lf\n",mak);
+							lev_HP= lev_HP- (mak/4);
+							lev_DF= lev_DF-(mak*3)/4;
+						} 
+						else{
+							printf("������ ������ �β������־���!\n");
+							printf("===================================\n");
+							printf("��Ű� ���� ���̿� ���� ����� �帥��...\n");
+						}
+					}
+					if (mn==5){
+						if (md>=8){
+							printf("�巡���� ���ῡ �߰ſ�����!\n");
+							printf("===================================\n");
+							printf("����� �ܴ��� ������ ���ظ� �پ�´�!\n");
+							printf("������ : %.2lf\n",mak);
+							lev_HP= lev_HP- (mak/4);
+							lev_DF= lev_DF-(mak*3)/4;
+						} 
+						else{
+							printf("�巡���� ������ ������ �������־���!\n");
+							printf("===================================\n");
+							printf("��Ű� �巡�� ���̿� ���� ����� �帥��...\n");
+						}
+					}
+					Sleep(2500);
+					goto BATTLE;
+					}
+				
+					
+				else {
+					printf("����� ������ ����� �����Ҽ������͸� ����...\n");
+					printf("===================================\n");
+					Sleep(2500);
+					goto BATTLE;
+					}
+			}
+			else {
+				goto ACT;
+			}
+		}	
+		
+		
+		
+		else if (mov ==3)
+		{
+		
+			back1:
+			system("cls");
+			printf("PLAYER\n");
+			printf("===================================\n");
+			printf("�����ϴ�  ���� +%d��\n",mf );
+			printf("����ϴ�  ���� +%d��\n",tf );
+			printf("ȸ���ϴ�  ���� +%d��\n",of );
+			printf("��������  ���� +%d��\n",ff );
+			printf("��    ť    ��: %.2lf (%.2lf + %.2lf)\n",At,levAt,noAt);
+			printf("�������� �� ��:	%d%%\n",CR);
+			printf("ü          ��:	%.2lf (%.2lf + %.2lf)\n",HP,levhp,nohp);
+			printf("��    ��    ��:	%.2lf\n",DF);
+			printf("===================================\n");
+			printf("����ġ : %.2f / %d\n",EXP,EXPMAX);
+			printf("�� ��  : %d\n",level);
+			printf("�� ��  : %d��\n",coin);
+			printf("===================================\n");
+			printf("���ư��⸦ ���Ѵٸ� 1�� �Է� \n");
+			int Inum;
+			scanf("%d",&Inum);
+			if (Inum==1){
+				goto main;
+			}
+			else if (Inum != 1){
+				
+				goto back1;
+			}	
+			
+		}
+		else{
+			goto main;
+		}
+			
+	}
+	
+else if (sta==2){
+	exit(0);
+}
+else {
+	goto START;
+}
+}
