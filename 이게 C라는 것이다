@@ -1,0 +1,4 @@
+#include<stdio.h>
+  int main(){
+  printf("이게 C라는 것이다");
+}
